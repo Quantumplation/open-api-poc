@@ -31,4 +31,4 @@ jobs:
           ref: main
           path: ./base
       - name: exampleSetFlag Hack
-        run: cat ./head/api.yaml
+        run: cat ./head/api.yaml | grep -v exampleSetFlag
