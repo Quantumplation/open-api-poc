@@ -18,7 +18,19 @@ paths:
           content:
             '*/*':
               schema:
+                type: string
+                exampleSetFlag: false
+    /other:
+    get:
+      tags:
+      - creative-controller
+      operationId: other
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
                 type: integer
-                format: int32
                 exampleSetFlag: false
 components: {}
