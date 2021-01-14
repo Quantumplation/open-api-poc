@@ -35,6 +35,6 @@ jobs:
         uses: yaos/openapi-diff-action@v1.1.4
         with:
           # Your GitHub token to allow the action to create PR comments
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           base_spec: ./base/api.yaml
           head_spec: ./head/api.yaml
