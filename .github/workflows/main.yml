@@ -32,7 +32,6 @@ jobs:
           path: ./base
       - name: exampleSetFlag Hack
         run: cat ./head/api.yaml | grep -v exampleSetFlag > ./head/api-fixed.yaml
-         | grep -v exampleSetFlag > ./head/api.yaml
       - name: exampleSetFlag Hack 2
         run: cat ./base/api.yaml | grep -v exampleSetFlag > ./base/api-fixed.yaml
     
