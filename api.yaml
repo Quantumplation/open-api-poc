@@ -1,0 +1,24 @@
+openapi: 3.0.1
+info:
+  title: Creatives API
+  description: Creatives API, owned by Growth
+  version: "0.1"
+servers:
+- url: http://localhost:8080
+  description: Generated server url
+paths:
+  /creatives:
+    get:
+      tags:
+      - creative-controller
+      operationId: test
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: integer
+                format: int32
+                exampleSetFlag: false
+components: {}
