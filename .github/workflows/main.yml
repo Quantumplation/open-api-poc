@@ -30,6 +30,10 @@ jobs:
         with:
           ref: main
           path: ./base
+      - name: exampleSetFlag Hack
+        run: cat ./head/api.yaml | grep -v exampleSetFlag > ./head/api.yaml
+      - name: exampleSetFlag Hack 2
+        run: cat ./base/api.yaml | grep -v exampleSetFlag > ./base/api.yaml
     
       - name: OpenAPI Diff in PR
         uses: yaos/openapi-diff-action@v1.1.4
