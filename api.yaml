@@ -20,7 +20,7 @@ paths:
               schema:
                 type: string
                 exampleSetFlag: false
-    /other:
+  /other:
     get:
       tags:
       - creative-controller
