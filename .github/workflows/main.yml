@@ -29,6 +29,6 @@ jobs:
         uses: blake-mealey/openapi-review-action@v1.0.0
         with:
           # The paths to the OpenAPI specs to process (single glob or array of globs)
-          spec-paths: api.yaml
+          spec-paths: ./api.yaml
           # Your GitHub token to allow the action to create PR comments
           github-token: ${{ secrets.GITHUB_TOKEN }}
