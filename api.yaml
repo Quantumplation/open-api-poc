@@ -18,7 +18,6 @@ paths:
           content:
             '*/*':
               schema:
-                type: integer
-                format: int32
+                type: string
                 exampleSetFlag: false
 components: {}
