@@ -24,11 +24,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-    
-      - name: OpenAPI Review
-        uses: blake-mealey/openapi-review-action@v1.0.0
         with:
-          # The paths to the OpenAPI specs to process (single glob or array of globs)
-          spec-paths: ./api.yaml
+          path: ./head
+      - uses: actions/checkout@v2
+        with:
+          ref: main
+          path: ./base
+    
+      - name: OpenAPI Diff in PR
+        uses: yaos/openapi-diff-action@v1.1.4
+        with:
           # Your GitHub token to allow the action to create PR comments
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          base_spec: ./base/api.yaml
+          head_spec: ./head/api.yaml
