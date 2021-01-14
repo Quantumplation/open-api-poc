@@ -31,14 +31,4 @@ jobs:
           ref: main
           path: ./base
       - name: exampleSetFlag Hack
-        run: cat ./head/api.yaml | grep -v exampleSetFlag > ./head/api.yaml
-      - name: exampleSetFlag Hack 2
-        run: cat ./base/api.yaml | grep -v exampleSetFlag > ./base/api.yaml
-    
-      - name: OpenAPI Diff in PR
-        uses: yaos/openapi-diff-action@v1.1.4
-        with:
-          # Your GitHub token to allow the action to create PR comments
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          base_spec: ./base/api.yaml
-          head_spec: ./head/api.yaml
+        run: cat ./head/api.yaml
